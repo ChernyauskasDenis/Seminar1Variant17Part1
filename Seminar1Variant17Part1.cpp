@@ -1,31 +1,49 @@
-﻿//Семинар 1 вариант 17, часть 1
+﻿//Семинар 1 вариант 17, часть 1 ver 1.12
 
 #include <iostream>
 #include <cmath>
-#include <locale.h>
+#include <locale.h> // библи
+#include <conio.h>  // библиотека для функции _getch
 
 
-
+using namespace std;
 int main()
 {
 	{} {}
-	double m, z, a, b, x, c;
-	setlocale(LC_ALL, "Rus");
-	std::cout << "Введите m \n";
-	std::cin >> m;
-	if (m <= 0)
+	double m = 0.0;  // объявление переменных и присвоение им значения 0
+	double z = 0.0;
+	double a = 0.0;
+	double b = 0.0;
+	double x = 0.0;
+	double c = 0.0;
+	char t;
+	setlocale(LC_ALL, "Rus"); // поддержка русского языка в консоли
+	cout << "Введите m \n";
+	cin >> m;  // ввод значени, по которому будет расчитана формула
+	if (m <= 0) //  проверка на область допустимых значений
 	{
-		std::cout << "Функция не имеет значений \n";
+		cout << "Функция не имеет значений \n";
 	}
 	else
 	{
 		x = 3 * m + 2;
-		a = (sqrt(pow(x, 2) - 24 * m));
+		a = (sqrt(pow(x, 2) - 24 * m)); // sqrt - вычисление корня, pow - возведение в квадрат 
 		c = sqrt(m);
 		b = (3 * (sqrt(m)) - 2 / c);
 		z = a / b;
-		std::cout << "результат  =  " << z;
+		cout << "результат  = " << z << endl;  // вывод результата и отчиска памяти 
+		cout << "нажмите enter для выхода";
+		t = _getch();  //  функция чтения символа с клавиатуры
+		if (t == 13)
+		{
+			exit(0); // выход при нажатии enter
+     	}
+		else
+		{
+			main();  //иначе повторный запуск функции для вычесления по формуле
+		}
 	}
+	
 	return 0;
 
 }
