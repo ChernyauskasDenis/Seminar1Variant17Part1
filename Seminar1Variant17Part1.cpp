@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <cmath>
-#include <locale.h> // библи
+#include <locale.h> // библиотека для преобразования символов в кирилицу
 #include <conio.h>  // библиотека для функции _getch
 
 
