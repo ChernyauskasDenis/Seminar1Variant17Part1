@@ -9,7 +9,6 @@
 using namespace std;
 int main()
 {
-	{} {}
 	double m = 0.0;  // объявление переменных и присвоение им значения 0
 	double z = 0.0;
 	double a = 0.0;
